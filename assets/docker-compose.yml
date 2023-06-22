@@ -45,6 +45,8 @@ services:
       - pongo-test-network
 
   postgres:
+    ports:
+      - "5432:5432"
     image: ${POSTGRES_IMAGE:-postgres:9.5}
     environment:
       POSTGRES_USER: kong
